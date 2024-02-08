@@ -15,12 +15,18 @@ class Heroi:
     def levelup(self):
         self.level += 1
         if self.classe == 'Guerreiro':
-            self.hp += randint(1,10)
+            bonushp = randint(1,10)
+            self.hp += bonushp            
             self.dano += 1
+            return bonushp    
+        
+            
             
             
         elif self.classe == 'Mago':
-            self.hp += randint(1,4)
+            bonushp = randint(1,4)
+            self.hp += bonushp
+            return bonushp
             
 class Monstro:
     def __init__(self, nome, dano, defesa, hp, dif) -> None:
